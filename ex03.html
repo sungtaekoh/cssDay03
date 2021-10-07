@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+box-sizing: border-box
+border/테두리 사이즈가 커짐에 따라 사이즈가 재각각이 되는걸 잡아준다
+보더의 두깨가 안쪽으로 굵어진다 
+*/
+*{box-sizing: border-box; }
+
+/*
+display:flex 가로정렬
+*/
+	#wrap{ width:460px; background-color:gray;}
+
+/*
+.div{width:150px; margin-top: 20px;}
+가로 길이를 150으로 줬으나 
+
+.a{border: 1px solid black;}
+보더의 길이에 따라 설정한 가로길이 값을 넘어설때가 있다
+
+*/
+	.div{width:150px; margin-top: 20px;}
+	.a{border: 1px solid black; float: right; }
+	.b{border: 10px solid black;  float: right; }
+	.c{border: 20px solid black;   float: right; }
+	
+	/*
+		#wrap02 dis:first-child{ background-color:red;}
+	id가 wrap02인 코드의 first-child 처번째 자식의 색을 변경하겠다
+	
+	#wrap02 dis:nth-child(2){ background-color:red;}
+	두번째 자식을 ..하겠다
+	
+	display:flex  //가로 정렬한다
+	
+	order: 			순번을 정할 수 있다
+	
+	display:flex가 안 먹힐때가 있다
+	그럴땐 flex-flow:row를 사용하며
+	가로가 아닌 세로로 사용할땐
+	flex-flow:column으로 사용한다
+	*/
+	#wrap02{display:flex; flex-flow:column;
+	 width: 200px;  border: 1px solid black; text-align:center;}
+	#wrap02 div{ width : 100%; }
+	#wrap02 .d01{ order:1; background-color:red;}
+	#wrap02 .d02 { order:2; display:flex; background-color:green;}
+	#wrap02 div:nth-child(3){ order:3; background-color:aqua;}
+	
+	.c01{order:2; background-color:gray;}
+	.c02{order:1; background-color:fuchsia;}
+</style>
+
+</head>
+
+
+<body>
+<div id= "wrap02">
+		<div class="d01"><h1>1</h1></div>
+		<div class="d02">
+		<div class="c01"><h1>내용1</h1></div>
+		<div class="c02"><h1>내용2</h1></div>
+		</div>
+		<div><h1>3</h1></div>
+</div>
+
+
+<hr>
+<div id="wrap">
+	<div class="div a">333</div>
+	<div class="div b">222</div>
+	<div class="div c">111</div>
+	</div>
+</body>
+</html>
+
+

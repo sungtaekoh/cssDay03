@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+       h2:first-letter{font-size:30px; color:red; text-transform:uppercase; }
+		h3:first-line{color:blue;}
+		input:focus { background-color:lime;}
+		label{color:white;}
+		input:checked +label{background-color:gray;}
+		.div01{
+		background-color:yellow;width:300px; height:70px;
+		padding:25px;
+		 box-shadow:10px 10px 15px black;
+		/*
+		한번에 모든 방향에 준다
+		border:15px solid navy;
+		
+		한 방향만 테두리를 준다
+		border-bottom: 15px solid navy;
+		
+		위 방향에만 double:두줄 을 준다
+		border-top: 15px double red;
+		*/
+			border:15px solid navy;
+			/*
+			안쪽으로 여백을 준다
+			padding-top: 20px;
+			
+		    모든 방향을 준다
+			padding:20px;
+		
+			padding: (숫자 4개를 쓸 경우 위 오 아 왼//2개를 쓸경우 위아래 오왼)
+			*/
+		padding:20px;
+		/*
+		margin:밀어내는것
+		margin-left:50px; 			왼쪽만 준다(그 외에도 top bottom등 다양하게 가능하다)
+		*/
+		margin: 50px;
+		}
+		/*
+		text-shadow:  (그림자가 생긴다)//대상이 글자읙 경우에 사용한다
+		10px (음수/왼 양수/오) 
+		10px (음수/위, 양수/아래) 
+		15px black;(뿌옇기/ 숫자가 낮을수록 진하게 나타난다) 
+		font-size:70pt;
+		
+		*/
+		.title{font-family:"궁서체";
+		text-shadow: 10px 10px 15px black; font-size:70pt; }
+		
+		/*
+		img의 경우는 box-shadow를 사용하며 
+		의미는 text-shadow와 같다
+		*/
+		img{ width: 200px; height: 150px; box-shadow:10px 10px 15px black; }
+</style>
+</head>
+<body>
+<img src="resources/images/quiz.png">
+<hr>
+	<h1 class="title">제목이 들어갑니다</h1>
+<hr>
+<div class="div01">
+박스모델 padding,border,magin 속성의 기본값은 0.<br>
+상하좌우 방향(상우하좌) top, right, bottom, left있다.
+</div>
+
+
+<hr>
+	<h2>hello</h2>
+	<h3>문제)대한민국<br>수도는???</h3>
+	정답:<input type="text"><br>
+	힌트<input type="checkbox"><label>힌트입니다~</label>
+	
+</body>
+</html>
